@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCFL - May Cohort First Website</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		#header_div{
+			height: 100px;
+			background-color: white;
+			color: black;
+			padding: 10px; 
+			border-bottom-color:black;
+			border-bottom-style: solid; 
+		}
+/*		hr{
+			margin: 0;
+			padding: 0;
+			border-width: 2px;
+		} */
+		#main_content{
+			height: 500px;
+		}
+		#footer_div{
+			height: 100px;
+			background-color: black;
+			color: white;
+		}
+		#left{
+			width: 50%;
+			float: left;
+			height: 500px;
+		}
+		#right{
+			width: 50%;
+			float: right;
+			height: 500px;
+			background-color: green;
+		}
+		#left_top{
+			height: 300px;
+			padding-left: 30px;
+			overflow: scroll;
+		}
+		#left_bottom{
+			height: 160px;
+			background-color: lightblue;
+			color: red;
+			padding: 20px;
+			overflow: scroll;
+		}
+		#header_div img{
+			margin: 10px 400px 0 50px; 
+		}
+		#header_div a{
+			margin: 20px;
+			text-decoration: none;
+			color: black;
+			font-size: 20px;
+		}
+		#header_div a:hover{
+			color: red;
+		}
+		#course1{
+			list-style-type: lower-alpha;
+		}
+		#course2{
+			list-style-type: lower-roman;
+		}
+		#course3{
+			list-style-type: circle;
+		}
+		#course4{
+			list-style-type: square;
+		}
+		#left_top li{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="parent_div">
+		<div id="header_div">
+			<img src="assets/images/gfcl.gif">
+			<a href="#">Home</a>
+			<a href="#">About</a>
+			<a href="#">Courses</a>
+			<a href="#">Gallery</a>
+		</div>
+	<!--	<hr>  -->
+		<div id="main_content">
+			<div id="left">
+				<div id="left_top">
+					<h2>Courses 1 - Web Development</h2>
+					<ol id="course1">
+						<li id = "1" onclick="displayContent(id)">Frontend Development</li>
+						<li id = "2" onclick="displayContent(id)">Backend Development</li>
+						<li id = "3" onclick="displayContent(id)">Fullstack Development</li>
+						<li id = "4" onclick="displayContent(id)">UI/UX</li>
+					</ol>
+					<h2>Courses 2 - Application Development</h2>
+					<ol id="course2">
+						<li id = "5" onclick="displayContent(id)">Java Programming</li>
+						<li id = "6" onclick="displayContent(id)">Python Programming</li>
+						<li id = "7" onclick="displayContent(id)">C# Programming</li>
+					</ol>
+					<h2>Courses 3 - Database Administration</h2>
+					<ul id="course3">
+						<li id = "8" onclick="displayContent(id)">Oracle Database</li>
+						<li id = "9" onclick="displayContent(id)">Postreg Database</li>
+						<li id = "10" onclick="displayContent(id)">MySQL Database</li>
+					</ul>
+					<h2>Courses 4 - Data Analysis</h2>
+					<ul id="course4">
+						<li id = "11" onclick="displayContent(id)">Python Programming</li>
+						<li id = "12" onclick="displayContent(id)">PowerBi</li>
+						<li id = "13" onclick="displayContent(id)">Advanced Excel</li>
+						<li id = "14" onclick="displayContent(id)">Artificial Intelligence</li>
+						<li id = "15" onclick="displayContent(id)">Robotics</li>
+					</ul>
+				</div>
+				<div id="left_bottom">
+					<div id="content"></div>
+				</div>
+			</div>
+			<div id="right">
+				
+			</div>
+		</div>
+		<div id="footer_div">
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function displayContent(x){
+			let subject = document.getElementById(x).innerHTML;
+			//alert(subject);
+			document.getElementById("content").innerHTML = "I just selected " + subject + " as the Course I want to offer in GFCL Coding School";
+		}
+	</script>
+
+</body>
+</html>
